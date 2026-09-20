@@ -1,0 +1,23 @@
+{
+  "name": "pitchforge",
+  "version": "1.0.0",
+  "description": "Turn rough startup ideas into structured pitches with local AI.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "qvac",
+    "on-device-ai",
+    "local-ai",
+    "startup",
+    "pitch"
+  ],
+  "author": "lalitaditya568-droid",
+  "license": "MIT",
+  "dependencies": {
+    "@qvac/sdk": "0.19.1",
+    "express": "^5.x"
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PitchForge — Local AI Pitch Builder</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <main class="app">
+    <header>
+      <div class="brand">PitchForge</div>
+      <div class="badge">QVAC · LOCAL AI</div>
+
+      <h1>Turn an idea into a pitch.</h1>
+      <p>
+        Describe your startup idea and get a structured pitch generated
+        privately on your device.
+      </p>
+    </header>
+
+    <section class="workspace">
+      <div class="input-card">
+        <div class="section-label">01 · YOUR IDEA</div>
+
+        <textarea
+          id="idea"
+          maxlength="12000"
+          placeholder="Example: Build an app that helps college students find teammates for sports..."
+        ></textarea>
+
+        <div class="controls">
+          <span id="count">0 / 12,000</span>
+
+          <div>
+            <button id="exampleBtn" class="secondary">Load Example</button>
+            <button id="clearBtn" class="secondary">Clear</button>
+            <button id="generateBtn" class="primary">
+              Generate Pitch →
+            </button>
+          </div>
+        </div>
+
+        <div id="status"></div>
+      </div>
+
+      <div class="output-card">
+        <div class="section-label">02 · PITCH</div>
+        <h2>Your startup brief</h2>
+
+        <div id="output">
+          <div class="empty">
+            Your generated pitch will appear here.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
