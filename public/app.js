@@ -127,3 +127,20 @@ generateBtn.addEventListener("click", async () => {
 });
 
 updateCount();
+
+async function checkHealth() {
+  const badge = document.getElementById("qvacBadge");
+
+  try {
+    const response = await fetch("/health");
+    const data = await response.json();
+
+    if (data.status === "ok" && data.local && data.qvac) {
+      badge.textContent = "QVAC · LOCAL READY";
+    }
+  } catch {
+    badge.textContent = "QVAC · LOCAL";
+  }
+}
+
+checkHealth();
